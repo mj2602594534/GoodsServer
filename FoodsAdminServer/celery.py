@@ -14,7 +14,7 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE',
 # 创建Celery应用对象
 app = Celery('foods-server')
 
-# 配置
+# 配置,拿到__init__()下的脚本对象settings
 app.config_from_object('django.conf:settings')
 
 # 自动扫描task函数
